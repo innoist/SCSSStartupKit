@@ -23,4 +23,9 @@ $shadows... passing multiple args as params
 
 @import url()//used for e.g importing fonts, but variables cannot be used to import css/scss file
 
-lighten the color #888*0.1
+lighten the color Darken function
+
+CTRL+SHIFT+O go to symbol v.important like go to a tag, go to button
+
+mixins
+functions

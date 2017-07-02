@@ -1,5 +1,6 @@
 @import "./partials/variables";
 @import "./partials/mixins";
+@import "./partials/functions";
 @include fancy-links;
 @include apply-to-ie-6 {
     body {
@@ -11,7 +12,7 @@ body {
     font-family: $text-font;
     color: $text-color;
     @include large-screens {
-        font-size: 150%;
+        font-size: em(18px);
     }
 }
 
@@ -32,6 +33,9 @@ p {
 
 a {
     color: $link-color;
+    &:hover {
+        color: lighten($link-color, 15%);
+    }
 }
 
 .warning-button {
