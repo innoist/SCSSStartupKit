@@ -1,0 +1,160 @@
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/functions";
+@include fancy-links;
+@include apply-to-ie-6 {
+    body {
+        font-size: 125%;
+    }
+}
+
+body {
+    font-family: $text-font;
+    color: $text-color;
+    @include large-screens {
+        font-size: em(18px);
+    }
+}
+
+.error {
+    color: red;
+}
+
+///////////////////////////////////////////////EXTENDS START/////////////////////////
+%hightlight {
+    font-style: italic;
+}
+
+.cta-button {
+    @extend %hightlight;
+    @extend .foo !optional;
+    @extend .warning-button;
+    @include rounded;
+    font-weight: bold;
+}
+
+.critical-error {
+    @extend .error;
+    bottom: 1pm solid red;
+    font-weight: bold;
+}
+
+//////////////////////////////////////////////////extends end//////////////////////////
+//******************************** FOR LOOPS ********************************************/
+@for $i from 1 to 6 {
+    .col-#{$i} {
+        width: $i * 2em;
+    }
+}
+
+///////////////////////////////EACH LOOPS////////////////////////////////////////////////////
+$speakers: bob-banker,
+patty-plume,
+sanda-smith; //LIST
+@each $speak in $speakers {
+    .#{$speak}-profile {
+        background-image: url('/img/#{$speak}.png')
+    }
+}
+
+/////////////////////////////MAP//////////////////////////////////////////////////////////////
+$font-sizes:(tiny: 8px,
+small: 11px,
+medium: 13px,
+large: 15pm);
+@each $name,
+$size in $font-sizes {
+    .#{$name} {
+        font-size: #{$size};
+    }
+}
+
+//////////////////////////WHILE LOOP
+$j:2;
+@while $j <=8 {
+    .picture-#{$j} {
+        width: $j * 10%;
+    }
+    $j: $j+2;
+}
+
+//******************************** END FOR LOOPS ********************************************/
+//******************************** Conditions ********************************************/
+
+/*$contrast: normal;
+body {
+    @if $contrast==high {
+        color: #123;
+        background-color: red;
+    }
+    @else if $contrast==low {
+        color: #123;
+        background-color: white;
+    }
+    @else {
+        color: #123;
+        background-color: green;
+    }
+}*/
+
+//******************************** END Conditions ********************************************/
+h1,
+h2,
+h3,
+h4 {
+    font-family: $headline-font;
+}
+
+h2 {
+    @include large-text;
+}
+
+p {
+    font-family: $text-font;
+}
+
+a {
+    color: $link-color;
+    &:hover {
+        color: lighten($link-color, 15%);
+    }
+}
+
+.warning-button {
+    @include warning;
+    padding: 8px 12px;
+}
+
+#header {
+    @include box($border: 1px solid #fff, $radius: 12px);
+    @include box-shadow(2px 0px 4px #999,
+    1px 1px 6px $secondary-color);
+    height: $header-height;
+    background-color: $theme-color;
+    #main-menu {
+        li {
+            display: inline;
+        }
+        a {
+            color: $menu-item-color;
+        }
+    }
+    #logo {}
+}
+
+#main {
+    width: $content-width;
+    @include large-screens {
+        width: auto;
+        max-width: $content-width;
+    }
+    margin-left: auto;
+    margin-right: auto;
+    #content {}
+    #sidebar {}
+}
+
+#footer {
+    height: $footer-height;
+    background-color: $ternary-color;
+}
