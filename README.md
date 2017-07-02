@@ -1,0 +1,17 @@
+# SCSSStartupKit
+Startup kit for sass and scss with best practices
+Preprocessor:
+Step before CSS
+Language on top of CSS
+Powerful Capabilities:
+1. variables
+2. Nesting
+3. Mixings:
+4. Auto Vendor Prefixing
+
+SASS: Syntatctivall Awesome Style-sheets, shorter syntax
+SCSS: SASSY CSS, Newer Syntax, 
+
+https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css
+https://rubyinstaller.org/    make sure to check 'Add Rubyexecutables to your PATH'
+gem install sass
