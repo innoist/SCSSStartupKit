@@ -20,6 +20,7 @@ body {
     color: red;
 }
 
+///////////////////////////////////////////////EXTENDS START/////////////////////////
 %hightlight {
     font-style: italic;
 }
@@ -38,6 +39,26 @@ body {
     font-weight: bold;
 }
 
+//////////////////////////////////////////////////extends end//////////////////////////
+//******************************** Conditions ********************************************/
+
+/*$contrast: normal;
+body {
+    @if $contrast==high {
+        color: #123;
+        background-color: red;
+    }
+    @else if $contrast==low {
+        color: #123;
+        background-color: white;
+    }
+    @else {
+        color: #123;
+        background-color: green;
+    }
+}*/
+
+//******************************** END Conditions ********************************************/
 h1,
 h2,
 h3,

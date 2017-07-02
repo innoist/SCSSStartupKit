@@ -45,3 +45,7 @@ but extends have limitation to media query, and multiple inheritance
 but but but.... wow... mixins after gzip is small size and performance is excellent
 
 WE COULD CHOOSE MIXINS ONLY AND NOT EXTENDS
+===============================================================
+
+conditional rendering
+condition for theming :Thumbsup
