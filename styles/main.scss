@@ -16,6 +16,28 @@ body {
     }
 }
 
+.error {
+    color: red;
+}
+
+%hightlight {
+    font-style: italic;
+}
+
+.cta-button {
+    @extend %hightlight;
+    @extend .foo !optional;
+    @extend .warning-button;
+    @include rounded;
+    font-weight: bold;
+}
+
+.critical-error {
+    @extend .error;
+    bottom: 1pm solid red;
+    font-weight: bold;
+}
+
 h1,
 h2,
 h3,
