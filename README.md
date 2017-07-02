@@ -49,3 +49,14 @@ WE COULD CHOOSE MIXINS ONLY AND NOT EXTENDS
 
 conditional rendering
 condition for theming :Thumbsup
+
+================================================================
+LOOP
+
+for : through (inclusive upper limit) and to (exclusive upper limit)
+for loop is restricted to numbers but with for each you can iterate any
+@each loop
+
+Map: key value Pair data structure
+
+WHILE LOOP

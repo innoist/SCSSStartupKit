@@ -40,6 +40,45 @@ body {
 }
 
 //////////////////////////////////////////////////extends end//////////////////////////
+//******************************** FOR LOOPS ********************************************/
+@for $i from 1 to 6 {
+    .col-#{$i} {
+        width: $i * 2em;
+    }
+}
+
+///////////////////////////////EACH LOOPS////////////////////////////////////////////////////
+$speakers: bob-banker,
+patty-plume,
+sanda-smith; //LIST
+@each $speak in $speakers {
+    .#{$speak}-profile {
+        background-image: url('/img/#{$speak}.png')
+    }
+}
+
+/////////////////////////////MAP//////////////////////////////////////////////////////////////
+$font-sizes:(tiny: 8px,
+small: 11px,
+medium: 13px,
+large: 15pm);
+@each $name,
+$size in $font-sizes {
+    .#{$name} {
+        font-size: #{$size};
+    }
+}
+
+//////////////////////////WHILE LOOP
+$j:2;
+@while $j <=8 {
+    .picture-#{$j} {
+        width: $j * 10%;
+    }
+    $j: $j+2;
+}
+
+//******************************** END FOR LOOPS ********************************************/
 //******************************** Conditions ********************************************/
 
 /*$contrast: normal;
@@ -88,7 +127,8 @@ a {
 
 #header {
     @include box($border: 1px solid #fff, $radius: 12px);
-    @include box-shadow(2px 0px 4px #999, 1px 1px 6px $secondary-color);
+    @include box-shadow(2px 0px 4px #999,
+    1px 1px 6px $secondary-color);
     height: $header-height;
     background-color: $theme-color;
     #main-menu {
